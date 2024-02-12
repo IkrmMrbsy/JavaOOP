@@ -3,33 +3,28 @@ public class PersonObject {
         //Object adlh hasil instansiasi dari class//
         //membuat object kita bisa menggunakan kata kunci (new dan diikuti dengan nama classnya)//
         //Mmembuat object//
-        var person1 = new PersonClass("Ikram", "Jakarta", 20);
-        //Untuk mengakses field kita butuh titik setelah nama object dan diikuti nama field nya//
-       // person1.name = "Ikram";//Memasukan field dengan isinya ikram//
-        //person1.address = "Jakarta";//Memasukan field dengan isinya jakarta//
-        //person1.age = 20;//Memasukan field dengan isinya 20//
-        //PersonClass.country = "amerika";// //Ini tidak bisa di ubah karena memakai tipe data FINAL//
-        //Menambahkan Function//
-        person1.sayHello("Nazwa");
+        //Jika pakai constructor, wajib memasukan parameter nya juga//
+       var person1 = new PersonClass("Ahmad", "Bandung", 59);
+        //Untuk mengakses field nya, pakai (.)setelah nama object dan diikuti nama fieldnya//
+       person1.name = "Ahmad";
+       person1.address = "Jakarta";
+       person1.age = 54;
 
-        //Ini cara mencetak nya jik ingin satu2//
         System.out.println(person1.name);
         System.out.println(person1.address);
         System.out.println(person1.age);
-        System.out.println(person1.country);
-        //Ini cara mencetk nya menjadi sebuah kalimat//
-        //System.out.println("Halo nama saya " + person1.name + " Saya tinggal di " + person1.address + " Umur saya " + person1.age + " Saya dari negara " + person1.country);//
+        //Mengakses Method menggunakan (.) diikuti dengan nma method nya//
+        person1.sayHello("Zehan");
 
-        //Ini membuat yg kedua, sama seperti membuat person1//
-        var person2 = new PersonClass("Nazwa", "Bandung", 19);
-        //person2.name = "Nazwa";//
-        //person2.address = "Bandung";//
-        //person2.age = 19;//
-        System.out.println(person2.name);
-        System.out.println(person2.address);
-        System.out.println(person2.age);
-        System.out.println(person2.country);
-        person2.sayHello("Ikram");
+        //jika pakai constructor, wajib memasukan parameter nya juga//
+        //jika pakai constructor, tidak perlu membuat field nya lagi//
+        var person2 = new PersonClass("Zehan");//Dengan satu parameter(Constructor 2)//
+        person2.sayHello("Ahmad");
+
+        var person3 = new PersonClass();//Dengan Tanpa parameter(Constructor 3)//
+
+
+
 
 
     }

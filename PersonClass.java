@@ -11,13 +11,27 @@ public class PersonClass {
     //adalah function yg akan di panggil pertama kali object dibuat//
     //Kita bisa memberikan parametr pada constructor//
     //nama constructor harus sama seperti nama class nya//
-    PersonClass(String paramName, String paramAddress, int paramAge){
-        name = paramName;
-        address = paramAddress;
-        age = paramAge;
+    PersonClass(String Name2, String Address2, int Age2){
+        name = Name2;
+        address = Address2;
+        age = Age2;
+    }
+
+    //Constructor Overloading//
+    //Bisa membuat constructor lebih dari satu, dengan syarat tipe data/ jumlah parameter berbeda//
+    PersonClass(String Name2){//Dengan 1 parameter, jika jumlah/tipe data nya sama seperti di atas, akan error//
+        //name = Name2;->Jika seperti ini sebenarnya tidak baik, karena kode nya sama seperti di atas//
+        //Lebih baik memakai (this)//
+        //Constructor bisa memanggil constructor yang lain//
+        //Memanggil nya dengan kata kunci (this)//
+        this(Name2, null, 0);//Lebih baik seperti ini//
+    }
+
+    PersonClass(){//Dengan tanpa parameter//
+        this(null);
     }
     //Function//
-    void sayHello(String paramName){
-        System.out.println("Halo " + paramName + ", My name is " + name );
-    }
+   void sayHello(String NamaKedua){
+       System.out.println("Hello " + NamaKedua + ", My name is " + name);
+   }
 }
