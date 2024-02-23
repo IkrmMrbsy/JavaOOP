@@ -3,7 +3,7 @@ public class PersonObject {
         //Object adlh hasil instansiasi dari class//
         //membuat object kita bisa menggunakan kata kunci (new dan diikuti dengan nama classnya)//
         //Mmembuat object//
-        //Jika pakai constructor, wajib memasukan parameter nya juga//
+        //Jika pakai constructor, wajib memasukan value nya di dalam kurung//
        var person1 = new PersonClass("Ahmad", "Bandung", 59);
         //Untuk mengakses field nya, pakai (.)setelah nama object dan diikuti nama fieldnya//
        person1.name = "Ahmad";
@@ -16,16 +16,30 @@ public class PersonObject {
         //Mengakses Method menggunakan (.) diikuti dengan nma method nya//
         person1.sayHello("Zehan");
 
-        //jika pakai constructor, wajib memasukan parameter nya juga//
+        //jika pakai constructor, wajib memasukan value nya juga//
         //jika pakai constructor, tidak perlu membuat field nya lagi//
         var person2 = new PersonClass("Zehan");//Dengan satu parameter(Constructor 2)//
         person2.sayHello("Ahmad");
 
         var person3 = new PersonClass();//Dengan Tanpa parameter(Constructor 3)//
 
+        //BAGIAN INHERITANCE//
+        var inheritance = new Manager();
+        inheritance.name = "Zehan";
+        inheritance.sayHello("Ahmad");
 
+        var vp = new VicePresident();
+        vp.name = "Rio";
+        vp.sayHello("Choki");
 
+        //Super Keyword//
+        var shape = new Shape();
+        System.out.println(shape.getCorner());
 
-
+        var rectangle = new Rectangle();
+        System.out.println(rectangle.getCorner());
+        System.out.println(rectangle.getParentCorner());
+        //Super Keyword//
+        //BAGIAN INHERITANCE//
     }
 }

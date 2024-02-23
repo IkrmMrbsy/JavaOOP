@@ -28,10 +28,13 @@ public class PersonClass {
     }
 
     PersonClass(){//Dengan tanpa parameter//
+
         this(null);
     }
+    //Constructor Overloading//
     //Function//
    void sayHello(String NamaKedua){
-       System.out.println("Hello " + NamaKedua + ", My name is " + name);
+
+        System.out.println("Hello " + NamaKedua + ", My name is " + name);
    }
 }
