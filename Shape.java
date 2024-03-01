@@ -5,6 +5,7 @@ class Shape {
     //Tidak hanya method, field juga bisa kita akses pakai kata kunci SUPER//
     //Jadi this itu untuk mengakses object saat ini, kalau super untuk parent nya//
     int getCorner(){
+
         return 0;
     }
 }
